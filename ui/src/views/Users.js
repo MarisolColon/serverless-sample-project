@@ -10,12 +10,12 @@ async function fetchUsers (state = {}) {
 }
 
 function createUser (user) {
-  if (!user) throw new Error('Error, no user received on save fucntion')
+  if (!user) throw new Error('Error, no user received on save function')
   return UsersService.createUser(user)
 }
 
 function updateUser (user) {
-  if (!user) throw new Error('Error, no user received on save fucntion')
+  if (!user) throw new Error('Error, no user received on save function')
   return UsersService.updateUser(user.id, user)
 }
 
