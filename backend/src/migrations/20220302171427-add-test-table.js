@@ -1,14 +1,18 @@
-const { Sequelize } = require('sequelize')
+const { Sequelize, DataTypes } = require('sequelize')
 
 module.exports = {
   up: ({ context: queryInterface }) => {
-    return queryInterface.createTable('test', {
+    return queryInterface.createTable('tests', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         unique: true,
         allowNull: false,
         autoIncrement: true
+      },
+      description: {
+        type: DataTypes.STRING(30),
+        allowNull: false
       },
       created_at: {
         allowNull: false,

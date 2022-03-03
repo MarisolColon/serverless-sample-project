@@ -14,7 +14,7 @@ class ServiceFactory {
       auth: {
         serviceClass: AuthService
       },
-      test: {
+      tests: {
         serviceClass: TestService,
         models:['Test']
       }

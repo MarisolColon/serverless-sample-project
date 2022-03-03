@@ -9,13 +9,13 @@ module.exports = (sequelize) => {
       allowNull: false,
       autoIncrement: true
     },
-      description: {
+    description: {
       type: DataTypes.STRING(30),
-        allowNull: false
+      allowNull: false
     }
-    },
-    {
-      underscored: true
-    })
+  },
+  {
+    underscored: true
+  })
   return model
 }
