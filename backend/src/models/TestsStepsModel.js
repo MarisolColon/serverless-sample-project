@@ -1,5 +1,4 @@
 const { DataTypes } = require('sequelize')
-const {Sequelize} = require("sequelize/types");
 
 module.exports = (sequelize) => {
   const model = sequelize.define('TestSteps', {
@@ -11,16 +10,16 @@ module.exports = (sequelize) => {
         autoIncrement: true
       },
       testId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         unique: true,
         allowNull: false
       },
       details: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false
       },
       expectedResult: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false
       }
     },

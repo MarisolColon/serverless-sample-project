@@ -9,23 +9,25 @@ class TestsStepsService extends BaseService {
       }
     })
   }
-  listTestsSteps () {
+  listTestsSteps (testId) {
     const testsStepsModel = this.getModel('TestSteps')
     return testsStepsModel.findAll({
-      attributes: { exclude: ['password'] }
+      where: {
+        testId
+      }
     })
   }
   createTestsSteps (testStep) {
     const testsStepsModel = this.getModel('TestSteps')
     return testsStepsModel.create(testStep)
   }
-  updateTestsSteps (testStepId, details) {
+  updateTestsSteps (testId, testStepId, details) {
     const testsStepsModel = this.getModel('TestSteps')
-    return testsStepsModel.update(details, { where: { id: testStepId }})
+    return testsStepsModel.update(details, { where: { id: testStepId, testId }})
   }
-  destroyTestsSteps (testStepId) {
+  destroyTestsSteps (testId, testStepId) {
     const testsStepsModel = this.getModel('TestSteps')
-    return testsStepsModel.destroy({ where: { id: testStepId }})
+    return testsStepsModel.destroy({ where: { id: testStepId, testId }})
   }
 }
 module.exports = TestsStepsService

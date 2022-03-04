@@ -1,7 +1,7 @@
 const express = require('express')
 const { validation } = require('../utils/validation')
 const controllerValidations = require('../validations/testsSteps')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 const testsStepsController = require('../controllers/testsStepsController')
 
 router.get(

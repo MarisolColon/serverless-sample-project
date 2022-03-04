@@ -33,7 +33,7 @@ router.delete(
 )
 
 router.use(
-  '/:id/steps',
+  '/:testId/steps',
   testsStepsRouter
 )
 

@@ -19,7 +19,7 @@ class ServiceFactory {
         serviceClass: TestService,
         models:['Test']
       },
-      tests_steps: {
+      testsSteps: {
         serviceClass: TestsStepsService,
         models:['TestSteps']
       }
