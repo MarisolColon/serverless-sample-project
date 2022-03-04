@@ -1,4 +1,4 @@
-
+import FieldAction from "../components/CRUD/FieldAction"
 import Field from "../components/CRUD/Field";
 
 export default class Test {
@@ -13,6 +13,16 @@ export default class Test {
       new Field({
         name: 'description'
       })
+    ]
+  }
+  static getExtraActions() {
+    return [
+      new FieldAction(
+        (entity) => {
+          window.location.href = `/tests/${entity.id}/steps`
+        },
+        'FaClipboardList'
+      )
     ]
   }
 }
