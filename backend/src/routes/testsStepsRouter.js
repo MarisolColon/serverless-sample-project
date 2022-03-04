@@ -1,41 +1,34 @@
 const express = require('express')
 const { validation } = require('../utils/validation')
-const controllerValidations = require('../validations/tests')
+const controllerValidations = require('../validations/testsSteps')
 const router = express.Router()
-const testsController = require('../controllers/testsController')
-const testsStepsRouter = require('./testsStepsRouter')
+const testsStepsController = require('../controllers/testsStepsController')
 
 router.get(
   '/',
-  testsController.getTests
+  testsStepsController.getTestsSteps
 )
 
 router.post(
   '/',
   validation(controllerValidations.createValidations),
-  testsController.createTest
+  testsStepsController.createTestsSteps
 )
 
 router.get(
   '/:id',
-  testsController.getTest
+  testsStepsController.getTestsSteps
 )
 
 router.put(
   '/:id',
   validation(controllerValidations.updateValidations),
-  testsController.updateTest
+  testsStepsController.updateTestsSteps
 )
 
 router.delete(
   '/:id',
-  testsController.deleteTest
+  testsStepsController.deleteTestsSteps
 )
-
-router.use(
-  '/:id/steps',
-  testsStepsRouter
-)
-
 
 module.exports = router

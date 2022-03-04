@@ -3,6 +3,7 @@ const DatabaseService = require('./DatabaseService')
 const AuthService = require('./AuthService')
 const UsersService = require('./UsersService')
 const TestService = require('./TestService')
+const TestsStepsService = require('./TestsStepsService')
 
 class ServiceFactory {
   static getServices () {
@@ -17,6 +18,10 @@ class ServiceFactory {
       tests: {
         serviceClass: TestService,
         models:['Test']
+      },
+      tests_steps: {
+        serviceClass: TestsStepsService,
+        models:['TestSteps']
       }
     }
   }
