@@ -28,6 +28,7 @@ function Header () {
         <Nav className="mr-auto">
           <Link to="/users" className={'nav-link'}>Users</Link>
           <Link to="/" className={'nav-link'}>Reports</Link>
+          <Link to="/tests" className={'nav-link'}>Tests</Link>
           <Button
             variant={"secondary"}
             style={{ position: 'fixed', right: '1em' }}
