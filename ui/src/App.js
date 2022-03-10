@@ -7,6 +7,7 @@ import Users from "./views/Users";
 import React from "react";
 import { getToken } from "./utils/session"
 import Tests from "./views/Tests"
+import TestsSteps from "./views/TestsSteps";
 
 
 export default class App extends React.Component {
@@ -22,6 +23,7 @@ export default class App extends React.Component {
             <Route path="/" element={<Reports />}></Route>
             <Route path="/users" element={<Users />} />
             <Route path="/tests" element={<Tests />}></Route>
+            <Route path="/tests/:testId/steps" element={<TestsSteps />}></Route>
           </Routes>
         </Container>
       </BrowserRouter>

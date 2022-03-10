@@ -23,6 +23,7 @@ function onUpdate (test) {
 }
 
 const fields = Test.getFields()
+const extraActions = Test.getExtraActions()
 
 export default function Tests () {
   return (
@@ -34,6 +35,7 @@ export default function Tests () {
         onDelete={onDelete}
         onCreate={onCreate}
         onUpdate={onUpdate}
+        extraActions={extraActions}
       />
     </main>
   );
